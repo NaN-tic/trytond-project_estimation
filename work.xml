@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tryton>
+    <data>
+
+        <record model="ir.ui.view" id="project_estimation_view_form">
+            <field name="model">project.estimation</field>
+            <field name="type">form</field>
+            <field name="name">project_estimation_form</field>
+        </record>
+        <record model="ir.ui.view" id="project_estimation_view_list">
+            <field name="model">project.estimation</field>
+            <field name="type">tree</field>
+            <field name="name">project_estimation_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_project_estimation">
+            <field name="name">Project Estimation</field>
+            <field name="res_model">project.estimation</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_project_estimation_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="project_estimation_view_list"/>
+            <field name="act_window" ref="act_project_estimation"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_project_estimation_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="project_estimation_view_form"/>
+            <field name="act_window" ref="act_project_estimation"/>
+        </record>
+        <record model="ir.model.access" id="access_project_estimation">
+            <field name="model" search="[('model', '=', 'project.estimation')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_project_estimation_admin">
+            <field name="model" search="[('model', '=', 'project.estimation')]"/>
+            <field name="group" ref="project.group_project_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="project_estimation_line_view_form">
+            <field name="model">project.estimation.line</field>
+            <field name="type">form</field>
+            <field name="name">project_estimation_line_form</field>
+        </record>
+        <record model="ir.ui.view" id="project_estimation_line_view_list">
+            <field name="model">project.estimation.line</field>
+            <field name="type">tree</field>
+            <field name="name">project_estimation_line_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_project_estimation_line">
+            <field name="name">Project Estimation Line</field>
+            <field name="res_model">project.estimation.line</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_project_estimation_line_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="project_estimation_line_view_list"/>
+            <field name="act_window" ref="act_project_estimation_line"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_project_estimation_line_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="project_estimation_line_view_form"/>
+            <field name="act_window" ref="act_project_estimation_line"/>
+        </record>
+        <record model="ir.model.access" id="access_project_estimation_line">
+            <field name="model" search="[('model', '=', 'project.estimation.line')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_project_estimation_line_admin">
+            <field name="model" search="[('model', '=', 'project.estimation.line')]"/>
+            <field name="group" ref="project.group_project_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="project_estimation_predecessor_successor_view_form">
+            <field name="model">project.estimation.predecessor_successor</field>
+            <field name="type">form</field>
+            <field name="name">project_estimation_predecessor_successor_form</field>
+        </record>
+        <record model="ir.ui.view" id="project_estimation_predecessor_successor_view_list">
+            <field name="model">project.estimation.predecessor_successor</field>
+            <field name="type">tree</field>
+            <field name="name">project_estimation_predecessor_successor_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_project_estimation_predecessor_successor">
+            <field name="name">Predecessor - Successor</field>
+            <field name="res_model">project.estimation.predecessor_successor</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_project_estimation_predecessor_successor_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="project_estimation_predecessor_successor_view_list"/>
+            <field name="act_window" ref="act_project_estimation_predecessor_successor"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_project_estimation_predecessor_successor_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="project_estimation_predecessor_successor_view_form"/>
+            <field name="act_window" ref="act_project_estimation_predecessor_successor"/>
+        </record>
+        <record model="ir.model.access" id="access_project_estimation_predecessor_successor">
+            <field name="model" search="[('model', '=', 'project.estimation.predecessor_successor')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_project_estimation_predecessor_successor_admin">
+            <field name="model" search="[('model', '=', 'project.estimation.predecessor_successor')]"/>
+            <field name="group" ref="project.group_project_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="project_estimation_create_task_start_view_form">
+            <field name="model">project_estimation.create_task_start</field>
+            <field name="type">form</field>
+            <field name="name">project_estimation_create_task_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="project_estimation_create_task_start_view_list">
+            <field name="model">project_estimation.create_task_start</field>
+            <field name="type">tree</field>
+            <field name="name">project_estimation_create_task_start_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_project_estimation_create_task_start">
+            <field name="name">Create Task Start</field>
+            <field name="res_model">project_estimation.create_task_start</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_project_estimation_create_task_start_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="project_estimation_create_task_start_view_list"/>
+            <field name="act_window" ref="act_project_estimation_create_task_start"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_project_estimation_create_task_start_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="project_estimation_create_task_start_view_form"/>
+            <field name="act_window" ref="act_project_estimation_create_task_start"/>
+        </record>
+        <record model="ir.model.access" id="access_project_estimation_create_task_start">
+            <field name="model" search="[('model', '=', 'project_estimation.create_task_start')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_project_estimation_create_task_start_admin">
+            <field name="model" search="[('model', '=', 'project_estimation.create_task_start')]"/>
+            <field name="group" ref="project.group_project_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="project_work_view_form">
+            <field name="model">project.work</field>
+            <field name="type">form</field>
+            <field name="inherit" ref="project.work_view_form"/>
+            <field name="name">project_work_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="create_task_start">
+          <field name="model">project_template.create_task_start</field>
+          <field name="type">form</field>
+          <field name="name">project_estimation_create_task_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wizard_project_estimation_create">
+            <field name="name">Create Works</field>
+            <field name="wiz_name">project_estimation.create_task</field>
+            <field name="model">project.estimation</field>
+        </record>
+        <record model="ir.action.keyword" id="act_wizard_project_estimation_create_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">project.estimation,-1</field>
+            <field name="action" ref="wizard_project_estimation_create"/>
+        </record>
+
+
+        <!-- Menus -->
+        <menuitem action="act_project_estimation"
+            id="menu_project_estimation"
+            parent="project.menu_project"  name="Project Estimation"/>
+        <menuitem action="act_project_estimation_line"
+            id="menu_project_estimation_line"
+            parent="menu_project_estimation"
+            name="Project Estimation Line"/>
+    </data>
+</tryton>

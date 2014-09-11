@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<form string="Project Estimation Line" col="8">
+    <label name="name"/>
+    <field name="name"/>
+    <label name="percentage"/>
+    <field name="percentage"/>
+    <label name="hours"/>
+    <field name="hours"/>
+    <label name="project"/>
+    <field name="project"/>
+    <label name="tracker"/>
+    <field name="tracker"/>
+    <label name="type"/>
+    <field name="type"/>
+    <label name="parent"/>
+    <field name="parent"/>
+
+
+    <field name="predecessors" colspan="4"/>
+    <field name="successors" colspan="4"/>
+
+    <separator name="procedure" colspan="4"/>
+    <separator name="description" colspan="4"/>
+    <field name="procedure" colspan="4"/>
+    <field name="description" colspan="4"/>
+</form>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<data>
+<!-- TODO fill "xpath expr" -->
+    <xpath expr="/form/notebook" position="inside">
+        <page name="procedure">
+            <field name="procedure"/>
+        </page>
+    </xpath>
+</data>
