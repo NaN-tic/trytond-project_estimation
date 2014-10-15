@@ -98,7 +98,7 @@ class ProjectEstimationLine(ModelSQL, ModelView):
             ], 'Type', required=True, select=True)
     description = fields.Text('Description')
     percentage = fields.Float('Percentage',
-        digits=(16, Eval('unit_digits', 2)), required=True)
+        digits=(16, 2), required=True)
     parent = fields.Many2One('project.estimation.line', 'Parent')
     predecessors = fields.Many2Many('project.estimation.predecessor_successor',
         'successor', 'predecessor', 'Predecessors')

@@ -95,45 +95,6 @@
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
-        <record model="ir.ui.view" id="project_estimation_create_task_start_view_form">
-            <field name="model">project_estimation.create_task_start</field>
-            <field name="type">form</field>
-            <field name="name">project_estimation_create_task_start_form</field>
-        </record>
-        <record model="ir.ui.view" id="project_estimation_create_task_start_view_list">
-            <field name="model">project_estimation.create_task_start</field>
-            <field name="type">tree</field>
-            <field name="name">project_estimation_create_task_start_list</field>
-        </record>
-        <record model="ir.action.act_window" id="act_project_estimation_create_task_start">
-            <field name="name">Create Task Start</field>
-            <field name="res_model">project_estimation.create_task_start</field>
-        </record>
-        <record model="ir.action.act_window.view" id="act_project_estimation_create_task_start_view1">
-            <field name="sequence" eval="10"/>
-            <field name="view" ref="project_estimation_create_task_start_view_list"/>
-            <field name="act_window" ref="act_project_estimation_create_task_start"/>
-        </record>
-        <record model="ir.action.act_window.view" id="act_project_estimation_create_task_start_view2">
-            <field name="sequence" eval="20"/>
-            <field name="view" ref="project_estimation_create_task_start_view_form"/>
-            <field name="act_window" ref="act_project_estimation_create_task_start"/>
-        </record>
-        <record model="ir.model.access" id="access_project_estimation_create_task_start">
-            <field name="model" search="[('model', '=', 'project_estimation.create_task_start')]"/>
-            <field name="perm_read" eval="True"/>
-            <field name="perm_write" eval="False"/>
-            <field name="perm_create" eval="False"/>
-            <field name="perm_delete" eval="False"/>
-        </record>
-        <record model="ir.model.access" id="access_project_estimation_create_task_start_admin">
-            <field name="model" search="[('model', '=', 'project_estimation.create_task_start')]"/>
-            <field name="group" ref="project.group_project_admin"/>
-            <field name="perm_read" eval="True"/>
-            <field name="perm_write" eval="True"/>
-            <field name="perm_create" eval="True"/>
-            <field name="perm_delete" eval="True"/>
-        </record>
         <record model="ir.ui.view" id="project_work_view_form">
             <field name="model">project.work</field>
             <field name="type">form</field>
@@ -142,9 +103,9 @@
         </record>
 
         <record model="ir.ui.view" id="create_task_start">
-          <field name="model">project_template.create_task_start</field>
+          <field name="model">project_estimation.create_task_start</field>
           <field name="type">form</field>
-          <field name="name">project_estimation_create_task_start_form</field>
+          <field name="name">project_estimate_create_task_start_form</field>
         </record>
 
         <record model="ir.action.wizard" id="wizard_project_estimation_create">
