@@ -23,7 +23,7 @@ class ProjectEstimation(ModelSQL, ModelView):
     __name__ = 'project.estimation'
 
     name = fields.Char('Name', required=True)
-    hours = fields.Float('Hours', digits=(16, Eval('unit_digits', 2)))
+    hours = fields.Float('Hours', digits=(16, 2))
     lines = fields.One2Many('project.estimation.line', 'project', 'Lines')
 
     def create_task(self, name, parent, effort):
@@ -105,7 +105,7 @@ class ProjectEstimationLine(ModelSQL, ModelView):
     successors = fields.Many2Many('project.estimation.predecessor_successor',
         'predecessor', 'successor', 'Successors')
     hours = fields.Function(fields.Float('Hours',
-        digits=(16, Eval('unit_digits', 2))), 'get_hours')
+        digits=(16, 2)), 'get_hours')
     procedure = fields.Text('Procedure')
 
     def get_hours(self, name):
